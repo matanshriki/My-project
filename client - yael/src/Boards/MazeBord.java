@@ -152,7 +152,6 @@ public class MazeBord extends Canvas {
 				System.out.println("("+i+","+j+") = "+arrRow[j]);
 				mazeData[i][j] = Integer.parseInt(arrRow[j]);
 				System.out.println("mazeData is: "+mazeData[i][j]);
-			System.out.println("matan");
 			}
 		}
 	}
