@@ -34,6 +34,8 @@ public interface Model extends Task {
 	
 	/**
 	 * This method return the index of the new thread.
+	 * @param thread This is the thread that the method get.
+	 * @return The thread.
 	 */
 	int addAndStart(Thread thread);
 

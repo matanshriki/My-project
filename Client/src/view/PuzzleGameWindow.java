@@ -76,7 +76,7 @@ public class PuzzleGameWindow extends BasicWindow {
 		});
 		
 		Button btnStart = new Button(shell, SWT.PUSH);
-		btnStart.setText("Start");
+		btnStart.setText("Play");
 		btnStart.setLayoutData(new GridData(SWT.LEFT, SWT.UP, false, false));
 		
 		btnStart.addSelectionListener(new SelectionListener() {

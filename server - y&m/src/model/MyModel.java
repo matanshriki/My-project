@@ -74,38 +74,6 @@ public class MyModel extends Observable implements Model {
 		return threads.size();
 	}
 
-//	@Override
-//	public void solveDomain() {
-//				
-//		//String problemDescription = domain.getProblemDescription();
-//	//	problemDescription = domain.getProblemDescription();
-//
-//		this.solution = solutionManager.getSolution(problemDescription);
-//		System.out.println("step 1 in solM");
-//		System.out.println(solution+ " !!");
-//		
-//		if (solution == null) {		
-//			System.out.println("step 1.1 in solM");
-//
-//			String Alg = problem.getAlgorithmName();
-//			System.out.println("tha Alg IS "+Alg);
-//			
-//			ArrayList<Action> actions = algorithm.search(domain);
-//			System.out.println("step 1.2 in solM");
-//
-//			solution = new Solution();
-//			System.out.println("step 1.3 in solM");
-//
-//			solution.setActions(actions);
-//			System.out.println("step 1.4 in solM");
-//
-//			solution.setProblemDescription(problemDescription);//
-//			System.out.println("step 2 in solM");
-//
-//			
-//			solutionManager.addSolution(solution);
-//		}
-//	}
 	
 	@Override
 	public void solveDomain() {
