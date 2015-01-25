@@ -4,16 +4,26 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
+/**
+ * this class is the algorithm A-star.
+ * @author Matan Shriki
+ *
+ */
+
 public class Astar extends CommonSearcher {
 	
-	//Define heuristic function And creating it generically
+	/**
+	 * Define heuristic function And creating it generically
+	 */
 	Heuristic h;
 	public Astar (Heuristic h)
 	{
 		this.h=h;
 	}
 
-	//Create a set of actions
+	/**
+	 * Create a set of actions
+	 */
 	public ArrayList<Action> search(SearchDomain domain) 
 	{
 		openList = new PriorityQueue<State>();
@@ -42,7 +52,9 @@ public class Astar extends CommonSearcher {
 			
 			closedList.add(state);
 		
-			//Depending on the activity algorithm, we will search at this time all my potential neighbors \ All possible actions
+			/**
+			 * Depending on the activity algorithm, we will search at this time all my potential neighbors \ All possible actions
+			 */
 			HashMap<Action, State> neighbours=domain.getAllPossibleMoves(state);
 			for (Action a : neighbours.keySet())
 			{
@@ -53,7 +65,9 @@ public class Astar extends CommonSearcher {
 				}
 				newPathPrice = g_score.get(state)+a.getPrice();
 
-				//Assuming we found the next best move for us, we set its values
+				/**
+				 * Assuming we found the next best move for us, we set its values
+				 */
 				if (!openList.contains(nextState) || newPathPrice<nextState.getPrice())
 				{
 					nextState.setCamefrom(state); 
