@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<myProperties>
+    <server_ip>127.0.0.1</server_ip>
+    <port>5001</port>
+    <default_algo>BFS</default_algo>
+    <default_domain>MazeDomain-(0,0)-(5,5)-6-6-5</default_domain>
+</myProperties>
