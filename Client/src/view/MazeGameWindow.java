@@ -82,30 +82,6 @@ public class MazeGameWindow extends BasicWindow {
 
 			}
 		});
-		// Button btnreplay = new Button(group1, SWT.PUSH);
-		// btnreplay.setText("replace maze");
-		// btnreplay.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true,
-		// false,2, 1));
-		// btnreplay.addSelectionListener(new SelectionListener() {
-		//
-		// @Override
-		// public void widgetSelected(SelectionEvent arg0) {
-		// userAction = "replay";
-		// System.out.println(userAction);
-		// MazeGameWindow.this.setChanged();
-		// MazeGameWindow.this.notifyObservers("replay");
-		// comboLevel.getSelectionIndex();
-		// btnPlay.setSelection(true);
-		// // btnPlay.getSelection();
-		// //shell.dispose();
-		// }
-		//
-		// @Override
-		// public void widgetDefaultSelected(SelectionEvent arg0) {
-		// // TODO Auto-generated method stub
-		//
-		// }
-		// });
 
 		// /Group 2///
 		Group group2 = new Group(shell, SWT.SHADOW_OUT);

@@ -34,7 +34,10 @@ public class PazzelDomain implements SearchDomain {
 		printThePazzel();
 	}
 	
-	//Default C'tor - does not accept values (an "opening") and defines the domain random
+	/**
+	 * Default C'tor - does not accept values (an "opening") and defines a random domain. 
+	 * @param start This is a start string.
+	 */
 		public PazzelDomain(String start) 
 		{
 			this.start = new PazzelState(start);
@@ -42,8 +45,11 @@ public class PazzelDomain implements SearchDomain {
 			printThePazzel();	
 		}
 	
+	
+	/**
+	 * This is defining the actions Puzzle.
+	 */
 	@Override
-	//Defining actions Pazzel
 	public HashMap<Action, State> getAllPossibleMoves(State current) 
 	{
 		HashMap<Action, State> moves=new HashMap<>();
@@ -52,7 +58,9 @@ public class PazzelDomain implements SearchDomain {
 		int i=0;
 		for (; Board[i]!=0; i++)	{}
 		
-		//Specifications "steps"  in this Pazzel (Based on data from the external function that checks availability Location)
+		/**
+		 * Specifications "steps"  in this puzzle (Based on data from the external function that checks availability Location)
+		 */
 		if (isAdmissibleLocation(i-3)) 
 		{
 			Action down = new Action("down");
@@ -101,7 +109,11 @@ public class PazzelDomain implements SearchDomain {
 		return state;
 	}
 	
-	// Function that checks if a qualifying position
+	/**
+	 * Boolean function that checks if a qualifying position
+	 * @param move This the move that the player trying to do.
+	 * @return true This is return if its a legal move, or false for illegal move.  
+	 */
 	private Boolean isAdmissibleLocation (int move)
 	{
 		if (move>=0 && move <=8)
@@ -112,7 +124,9 @@ public class PazzelDomain implements SearchDomain {
 	}
 	
 	
-	//Function that prints the puzzle 
+	/**
+	 * This function print the puzzle. 
+	 */
 	public void printThePazzel()
 	{
 		int [] Board = start.split();

@@ -15,10 +15,23 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Label;
 
+/**
+ * This class is the select game window. 
+ * the first window that client see when he open the game.
+ * @author Matan Shriki
+ *
+ */
+
 public class SelectGameWindow extends BasicWindow implements View, Observer {
 	private BasicWindow window = null;
 	SelectGameWindow thisInstance = this;
 
+	/**
+	 * This the C'tor of the select game window.
+	 * @param width This is the width of the window.
+	 * @param height This is the height of the window.
+	 * @param title This is the title of the window.
+	 */
 	public SelectGameWindow(int width, int height, String title) {
 		super(width, height, title);
 		display.loadFont("resources/Walk-Around-the-Block.ttf");
@@ -37,7 +50,9 @@ public class SelectGameWindow extends BasicWindow implements View, Observer {
 		gridData.horizontalSpan = 3;
 		title.setLayoutData(gridData);
 
-		// puzzle bottom
+		/**
+		 * This is the puzzle bottom.
+		 */
 		shell.setLayout(new GridLayout(3, true));
 		Image image2 = new Image(display, "resources/8Puzzle.gif");
 		Button btnSelectGame2 = new Button(shell, SWT.PUSH);
@@ -45,7 +60,9 @@ public class SelectGameWindow extends BasicWindow implements View, Observer {
 		btnSelectGame2.setLayoutData(new GridData(GridData.CENTER,
 				GridData.CENTER, true, true));
 
-		// Word Game bottom
+		/**
+		 * This is the  Word Game bottom
+		 */
 		shell.setLayout(new GridLayout(3, true));
 		Image image3 = new Image(display, "resources/wordGame.gif");
 		Button btnSelectGame3 = new Button(shell, SWT.PUSH);
@@ -53,7 +70,9 @@ public class SelectGameWindow extends BasicWindow implements View, Observer {
 		btnSelectGame3.setLayoutData(new GridData(GridData.CENTER,
 				GridData.CENTER, true, true));
 
-		// maze bottom
+		/**
+		 * This is the  maze bottom
+		 */
 		shell.setLayout(new GridLayout(3, true));
 		Image Image1 = new Image(display, "resources/maze.gif");
 		Button btnSelectGame1 = new Button(shell, SWT.PUSH);
